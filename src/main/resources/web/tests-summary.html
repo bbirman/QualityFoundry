@@ -315,15 +315,38 @@
 								<#if run.status == "running">
 									&nbsp;&nbsp;<strong>Start Time</strong> ${run.startTime} <br/>
 									&nbsp;&nbsp;<em>Generating Results...</em><br/>
-								
-								
+		
 								<tr>
-           	 						<td style="<#if testFlap.flappiness > 39> background-color: #FF6666; <#elseif testFlap.flappiness > 19> background-color: #FFB366; <#elseif testFlap.flappiness > 9> background-color: #FFFF66 </#if>">${testFlap.flappiness}</td>
-									<td style="<#if testFlap.flappiness > 39> background-color: #FF6666; <#elseif testFlap.flappiness > 19> background-color: #FFB366; <#elseif testFlap.flappiness > 9> background-color: #FFFF66 </#if>">${testFlap.name}</td>
-           	 						<td style="<#if testFlap.flappiness > 39> background-color: #FF6666; <#elseif testFlap.flappiness > 19> background-color: #FFB366; <#elseif testFlap.flappiness > 9> background-color: #FFFF66 </#if>">${testFlap.package}</td>
-           	 						<td style="<#if testFlap.flappiness > 39> background-color: #FF6666; <#elseif testFlap.flappiness > 19> background-color: #FFB366; <#elseif testFlap.flappiness > 9> background-color: #FFFF66 </#if>">${testFlap.since_change}</td>
-           	 						<td style="<#if testFlap.flappiness > 39> background-color: #FF6666; <#elseif testFlap.flappiness > 19> background-color: #FFB366; <#elseif testFlap.flappiness > 9> background-color: #FFFF66 </#if>">${testFlap.failure_owner}</td>
-           	 						<td style="<#if testFlap.flappiness > 39> background-color: #FF6666; <#elseif testFlap.flappiness > 19> background-color: #FFB366; <#elseif testFlap.flappiness > 9> background-color: #FFFF66 </#if>">${testFlap.duration}</td>
+           	 						<td style="
+										<#if testFlap.flappiness > 39> background-color: #FF6666; 
+										<#elseif testFlap.flappiness > 19> background-color: #FFB366; 
+										<#elseif testFlap.flappiness > 9> background-color: #FFFF66 
+										</#if>">${testFlap.flappiness}</td>
+									<td style="
+										<#if testFlap.flappiness > 39> background-color: #FF6666; 
+										<#elseif testFlap.flappiness > 19> background-color: #FFB366; 
+										<#elseif testFlap.flappiness > 9> background-color: #FFFF66 
+										</#if>">${testFlap.name}</td>
+           	 						<td style="
+										<#if testFlap.flappiness > 39> background-color: #FF6666; 
+										<#elseif testFlap.flappiness > 19> background-color: #FFB366; 
+										<#elseif testFlap.flappiness > 9> background-color: #FFFF66 
+										</#if>">${testFlap.package}</td>
+           	 						<td style="
+										<#if testFlap.flappiness > 39> background-color: #FF6666; 
+										<#elseif testFlap.flappiness > 19> background-color: #FFB366; 
+										<#elseif testFlap.flappiness > 9> background-color: #FFFF66 
+										</#if>">${testFlap.since_change}</td>
+           	 						<td style="
+										<#if testFlap.flappiness > 39> background-color: #FF6666; 
+										<#elseif testFlap.flappiness > 19> background-color: #FFB366; 
+										<#elseif testFlap.flappiness > 9> background-color: #FFFF66 
+										</#if>">${testFlap.failure_owner}</td>
+           	 						<td style="
+										<#if testFlap.flappiness > 39> background-color: #FF6666; 
+										<#elseif testFlap.flappiness > 19> background-color: #FFB366; 
+										<#elseif testFlap.flappiness > 9> background-color: #FFFF66 
+										</#if>">${testFlap.duration}</td>
            	 					</tr>
 
            	 				 </#list> -->
@@ -420,6 +443,88 @@
 							<!-- END: To delete once data is available-->
             			</tbody> 
     				</table> 
+
+					<!-- <#assign testsPackages = ${testsPackages}> -->
+					<div class="page-header"> <h2> All Tests <small>All tests sorted by package </small></h2> </div>
+	      				<table id="failedTests" class="table table-condensed table-bordered table-striped"> 
+	            			<thead> 
+	                			<tr> 
+									<th>Package Name</th> 
+	                				<th>Failed</th> 
+	                				<th>Skipped</th> 
+	                				<th>Passed</th> 
+	                				<th>Total</th> 
+	                			</tr> 
+	            			</thead> 
+
+	           	 			<tbody> 
+	           	 				<!-- UNCOMMENT <#list testsPackages as testPackage>
+	           	 					<tr>
+										<td>${testPackage.name}</td>
+	           	 						<td>${testPackage.failed}</td>
+	           	 						<td>${testPackage.skipped}</td>
+	           	 						<td>${testPackage.passed}</td>
+	           	 						<td>${testPackage.total}</td>
+	           	 					</tr>
+
+	           	 				 </#list> -->
+
+								<!-- BEGIN: To delete once data is available-->
+									<tr>
+	           	 						<td>package name</td>
+	           	 						<td>1</td>
+	           	 						<td>1</td>
+	           	 						<td>1</td>
+	           	 						<td>3</td>
+	           	 					</tr>
+									<tr>
+	           	 						<td>package name3</td>
+	           	 						<td>5</td>
+	           	 						<td>6</td>
+	           	 						<td>11</td>
+	           	 						<td>22</td>
+	           	 					</tr>
+									<tr>
+	           	 						<td>package name4</td>
+	           	 						<td>7</td>
+	           	 						<td>10</td>
+	           	 						<td>3</td>
+	           	 						<td>20</td>
+	           	 					</tr>
+									<tr>
+	           	 						<td>package name5</td>
+	           	 						<td>1</td>
+	           	 						<td>3</td>
+	           	 						<td>2</td>
+	           	 						<td>6</td>
+	           	 					</tr>
+									<tr>
+	           	 						<td>package name6</td>
+	           	 						<td>3</td>
+	           	 						<td>4</td>
+	           	 						<td>3</td>
+	           	 						<td>10</td>
+	           	 					</tr>
+									<tr>
+	           	 						<td>package name7</td>
+	           	 						<td>0</td>
+	           	 						<td>3</td>
+	           	 						<td>5</td>
+	           	 						<td>8</td>
+	           	 					</tr>
+									<tr>
+	           	 						<td>package name8</td>
+	           	 						<td>2</td>
+	           	 						<td>4</td>
+	           	 						<td>6</td>
+	           	 						<td>12</td>
+	           	 					</tr>
+								<!-- END: To delete once data is available-->
+	            			</tbody> 
+	    				</table>
+					
+
+
     		</div>
 		</div>
 	</div>
