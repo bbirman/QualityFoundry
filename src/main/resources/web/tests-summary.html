@@ -175,6 +175,10 @@
 				<ul class="breadcrumb">
 				  <li class="active">Run # Test Summary</li>
 				</ul>
+				
+				<div style="float:right">
+					Jump to <a href="#flappersHeader">Flappers</a> - <a href="#allTestsHeader">All Tests</a> 
+				</div>
 
 				<!-- <#assign testsFailed = ${testsFailed}> -->
       			<div class="page-header"> <h2> Failed Tests </h2> </div>
@@ -284,6 +288,7 @@
     				</table>
 
       			<!-- <#assign testsFlapping = ${testsFlapping}> -->
+				<a name="flappersHeader"></a>
       			<div class="page-header"> <h2> Flappers </h2> </div>
       				<table id="flappers" class="table table-condensed table-bordered table-striped"> 
             			<thead> 
@@ -434,6 +439,7 @@
     				</table> 
 
 					<!-- <#assign testsPackages = ${testsPackages}> -->
+					<a name="allTestsHeader"></a>
 					<div class="page-header"> <h2> All Tests <small>All tests sorted by package </small></h2> </div>
 	      				<table id="allTests" class="table table-condensed table-bordered table-striped"> 
 	            			<thead> 
