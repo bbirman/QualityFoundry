@@ -7,8 +7,6 @@
   
 	<link rel="stylesheet" href="scripts/bootstrap/css/bootstrap.css"/>
 	
-	
-	
 	<!-- For Accordion -->
 	<script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script> 
 	<script type="text/javascript" src="scripts/jquery-ui-1.8.21.custom/js/jquery-ui-1.8.21.custom.min.js"></script> 
@@ -27,22 +25,18 @@
 	<script type="text/javascript" src="scripts/DataTables-1.9.1/media/js/jquery.dataTables.js"></script>
 	<script type="text/javascript" src="scripts/DataTables-1.9.1/DT_bootstrap.js"></script>
 	<script type="text/javascript" charset="utf-8">
-				/* Default class modification */
-				$.extend( $.fn.dataTableExt.oStdClasses, {
-					"sSortAsc": "header headerSortDown",
-					"sSortDesc": "header headerSortUp",
-					"sSortable": "header"
-				} );
-
-				$(document).ready(function() {
-					$('#failedTests').dataTable( {"bPaginate": false});
-				} );
-				$(document).ready(function() {
-					$('#flappers').dataTable( {"bPaginate": false});
-				} );
+		/* Default class modification */
+		$.extend( $.fn.dataTableExt.oStdClasses, {
+			"sSortAsc": "header headerSortDown",
+			"sSortDesc": "header headerSortUp",
+			"sSortable": "header"
+		} );
+		$(document).ready(function() {
+			$('#failedTests').dataTable( {"bPaginate": false});
+			$('#flappers').dataTable( {"bPaginate": false});
+			$('#allTests').dataTable( {"bPaginate": false});
+		} );
 	</script>
-	
-
 	
 	<!-- Typeahead -->
 	<script type="text/javascript" src="scripts/bootstrap/bootstrap-typeahead.js"></script>
@@ -60,7 +54,6 @@
 				margin-bottom:20px; margin-left:20px; margin-right:20px; 
 				-moz-border-radius: 15px;
 				height:80px">
-
 
 		<img src="imgs/logo.png" height="80" width="140" style="margin-left:20px; margin-bottom:0px"/>
 		
@@ -82,7 +75,7 @@
 				box-shadow: 0px 1px 2px 2px #615A5A">
   		
 		<div class="row-fluid">
-    		
+
 			<div class="span2" id="accordion2" style="background-color:transparent; margin-top:0px; margin-bottom:0px; padding-bottom:50px;
 				padding-bottom: 20px; padding-top: 20px; padding-left: 20px; padding-right:0px; 
 				border-bottom-left-radius: 15px; 
@@ -90,9 +83,6 @@
 				border-top-right-radius: 0px;
 				border-bottom-right-radius: 0px">
       			<!--Sidebar content-->
-
-				
-
 
 				<h3> <a href="#">Test Inventory</a> </h3> 
 				<div id="accordion">
@@ -175,9 +165,6 @@
 						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Test Results</a> <span class="badge badge-important">6</span><br/>
 						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Code Coverage</a> <span class="badge badge-success">91%</span><br/>
 					</div>
-
-
-
 					<!-- END: To delete once data is available-->
 				</div>
     		</div>
@@ -185,6 +172,10 @@
     		<div class="span10" style="background-color:white; padding: 15px; margin-right:0px; border-top-right-radius:15px; border-bottom-right-radius:15px " id="content">
 				<!--Body content-->
     
+				<ul class="breadcrumb">
+				  <li class="active">Run # Test Summary</li>
+				</ul>
+
 				<!-- <#assign testsFailed = ${testsFailed}> -->
       			<div class="page-header"> <h2> Failed Tests </h2> </div>
       				<table id="failedTests" class="table table-condensed table-bordered table-striped"> 
@@ -291,8 +282,6 @@
 							<!-- END: To delete once data is available-->
             			</tbody> 
     				</table>
-
-
 
       			<!-- <#assign testsFlapping = ${testsFlapping}> -->
       			<div class="page-header"> <h2> Flappers </h2> </div>
@@ -446,7 +435,7 @@
 
 					<!-- <#assign testsPackages = ${testsPackages}> -->
 					<div class="page-header"> <h2> All Tests <small>All tests sorted by package </small></h2> </div>
-	      				<table id="failedTests" class="table table-condensed table-bordered table-striped"> 
+	      				<table id="allTests" class="table table-condensed table-bordered table-striped"> 
 	            			<thead> 
 	                			<tr> 
 									<th>Package Name</th> 
@@ -522,9 +511,6 @@
 								<!-- END: To delete once data is available-->
 	            			</tbody> 
 	    				</table>
-					
-
-
     		</div>
 		</div>
 	</div>
