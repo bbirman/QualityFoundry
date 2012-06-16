@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html style="">
+<head>
+	<title>Test Results</title>
+  
+	<link rel="stylesheet" href="scripts/bootstrap/css/bootstrap.css"/>
+	
+	<!-- For Accordion -->
+	<script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script> 
+	<script type="text/javascript" src="scripts/jquery-ui-1.8.21.custom/js/jquery-ui-1.8.21.custom.min.js"></script> 
+	<script >
+		$(function() {			
+			$("#accordion").accordion({
+				event : "mouseover",
+				active: false, 	
+				fillspace: true	
+			});
+		});
+	</script>
+	
+	<!-- DataTables -->
+	<link rel="stylesheet" type="text/css" href="scripts/DataTables-1.9.1/DT_bootstrap.css"/>
+	<script type="text/javascript" src="scripts/DataTables-1.9.1/media/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="scripts/DataTables-1.9.1/DT_bootstrap.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		/* Default class modification */
+		$.extend( $.fn.dataTableExt.oStdClasses, {
+			"sSortAsc": "header headerSortDown",
+			"sSortDesc": "header headerSortUp",
+			"sSortable": "header"
+		} );
+		$(document).ready(function() {
+			$('#pastFailures').dataTable( {"bPaginate": false});
+		} );
+	</script>
+	
+	<!-- Typeahead -->
+	<script type="text/javascript" src="scripts/bootstrap/bootstrap-typeahead.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+	    	var alCities = ['example package', 'test name', 'class name', 'john doveloper', 'John doveloper'].sort();
+	        $('#global-search').typeahead({source: alCities, items:5});
+		});
+	</script>
+</head>
+
+<body style="background-image:-webkit-linear-gradient(top, #FFFFFF 0%, #aaccdd 100%); background-repeat: no-repeat; background-attachment: fixed">
+	<div style="background-color:whiteZ; 
+				padding-left:20px; 
+				margin-bottom:20px; margin-left:20px; margin-right:20px; 
+				-moz-border-radius: 15px;
+				height:80px">
+
+		<img src="imgs/logo.png" height="80" width="140" style="margin-left:20px; margin-bottom:0px"/>
+		
+		<form class="form-search" style="float:right; padding-top:2%">
+	  		<input type="text" id="global-search" data-provide="typeahead" class="search-query" placeholder="Search all">
+	  		<button type="submit" class="btn">Search</button>
+		</form>
+	</div>
+	<!--   #aaccdd -->
+	<div class="container-fluid"
+		style="background-color: rgba(209, 209, 209, .6);
+				background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.5, transparent), to(transparent));
+				background-size: 2px 2px;
+				margin-left:15px; margin-right:15px; margin-bottom:40px; 
+				padding-left:0px; padding-top:0px; padding-right:0px;
+				border-radius:15px; 		
+				-moz-box-shadow: 10px 10px 5px #615A5A;
+				-webkit-box-shadow: 10px 10px 5px #615A5A;
+				box-shadow: 0px 1px 5px 5px #888">
+  		
+		<div class="row-fluid">
+
+			<div class="span2" id="accordion2" style="background-color:transparent; margin-top:0px; margin-bottom:0px; padding-bottom:50px;
+				padding-bottom: 20px; padding-top: 20px; padding-left: 20px; padding-right:0px; 
+				border-bottom-left-radius: 15px; 
+				border-top-left-radius: 15px;
+				border-top-right-radius: 0px;
+				border-bottom-right-radius: 0px">
+      			<!--Sidebar content-->
+
+				<h3> <a href="#">Test Inventory</a> </h3> 
+				<div id="accordion">
+
+				<!-- <#assign runs = ${runs}> 
+					<#list runs as run> 
+				
+					<h3><a href="#">${run.name}</a> 
+						<#if run.status == "running"> <img src="loading-snake.gif" alt="loading icon" style="padding-bottom: 6px; vertical-align:middle"/> </#if> 
+					</h3>
+					<div>
+						<#if run.status == "running">
+							&nbsp;&nbsp;<strong>Start Time</strong> ${run.startTime} <br/>
+							&nbsp;&nbsp;<em>Generating Results...</em><br/>
+							
+						<#else>
+							&nbsp;&nbsp;<strong>Start Time</strong> ${run.startTime} <br/>
+							&nbsp;&nbsp;<strong>End Time</strong> ${run.endTime} <br/>
+
+							&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Overview</a> <br/>
+							&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Test Results</a> 
+								<#if run.failedTests == 0> <span class="badge badge-success"> ${run.failedTests}</span>
+								<#else> <span class="badge badge-important"> ${run.failedTests}</span>
+								</#if><br/>
+							&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Code Coverage</a> 
+								<#if run.coverage > 90> <span class="badge badge-success"> ${run.coverage}%</span>
+								<#else> <span class="badge badge-important"> ${run.coverage}%</span>
+								</#if><br/>		
+						</#if>				
+					</div> -->
+					<!-- BEGIN: To delete once data is available-->
+					 <h3> Run 2</h3> 
+					<div>
+						&nbsp;&nbsp;<strong>Start Time</strong> 10:30 21-03-2012 <br/>
+						&nbsp;&nbsp;<strong>End Time</strong> 20:30 21-03-2012 <br/>
+						<br/>
+						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Build Output</a> <br/>
+						&nbsp;&nbsp; <span class="badge">6</span> <a href="#">Test Results</a>   <br/>
+						&nbsp;&nbsp; <span class="badge">6</span> <a href="#">Code Coverage</a> <br/>
+					</div>
+					<h3>Run 3 <img src="loading-snake.gif" alt="loading icon" style="padding-bottom: 6px; vertical-align:middle"/> </h3>
+					<div>
+						&nbsp;&nbsp;<strong>Start Time</strong> 10:30 21-03-2012 <br/>
+						&nbsp;&nbsp;<em>Generating Results...</em><br/>
+						
+					</div>
+					<h3>Run 4</h3>
+					<div>
+						&nbsp;&nbsp;<strong>Start Time</strong> 10:30 21-03-2012 <br/>
+						&nbsp;&nbsp;<strong>End Time</strong> 20:30 21-03-2012 <br/>
+
+						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Build Output</a> <br/>
+						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Test Results</a> <span class="badge badge-important">6</span><br/>
+						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Code Coverage</a> <span class="badge badge-success">91%</span><br/>
+					</div>
+					<h3>Run 4</h3>
+					<div>
+						&nbsp;&nbsp;<strong>Start</strong> 10:30 21-03-2012 <br/>
+						&nbsp;&nbsp;<strong>End</strong> 20:30 21-03-2012 <br/>
+
+						&nbsp;&nbsp;<a href="#">Build Output</a> <br/>
+						&nbsp;&nbsp;<a href="#">Test Results</a> <span class="badge badge-important">6</span><br/>
+						&nbsp;&nbsp;<a href="#">Code Coverage</a> <span class="badge badge-success">91%</span><br/>
+					</div>
+					<h3>Run 4</h3>
+					<div>
+						&nbsp;&nbsp;<strong>Start Time</strong> 10:30 21-03-2012 <br/>
+						&nbsp;&nbsp;<strong>End Time</strong> 20:30 21-03-2012 <br/>
+
+						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Build Output</a> <br/>
+						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Test Results</a> <span class="badge badge-important">6</span><br/>
+						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Code Coverage</a> <span class="badge badge-success">91%</span><br/>
+					</div>
+					<h3>Run 4</h3>
+					<div>
+						&nbsp;&nbsp;<strong>Start Time</strong> 10:30 21-03-2012 <br/>
+						&nbsp;&nbsp;<strong>End Time</strong> 20:30 21-03-2012 <br/>
+
+						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Build Output</a> <br/>
+						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Test Results</a> <span class="badge badge-important">6</span><br/>
+						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Code Coverage</a> <span class="badge badge-success">91%</span><br/>
+					</div>
+					<!-- END: To delete once data is available-->
+				</div>
+    		</div>
+    
+    		<div class="span10" style="background-color:white; padding: 15px; margin-right:0px; border-top-right-radius:15px; border-bottom-right-radius:15px; box-shadow: inset 3px 0px 3px #888; " id="content">
+				<!--Body content-->
+    
+				<ul class="breadcrumb">
+					<li>
+					    <a href="#">Run # Test Results</a> <span class="divider">/</span>
+					</li>
+					<li class="active">Sample Test</li>
+				</ul>
+				
+			
+				<div>
+				<div class="hero-unit" style="padding-top:5px; width:500px; margin-left:auto; margin-right:auto">
+				  <div class="page-header-dark"> <h3> ${test.name} Details</h3> </div>
+				  
+					<table width="500px">
+						<tr>
+					    	<td style="vertical-align:top"> 
+					            <strong> Status </strong> <br/> 
+								&nbsp;&nbsp;${test.status} <br/>
+					            <strong> Duration </strong> <br/> 
+								&nbsp;&nbsp;${test.duration} <br/>
+					        </td>
+							<td>
+					            <strong> Team Owner </strong> <br/>
+								&nbsp;&nbsp;${test.teamOwner} <br/>
+								<strong> Dev Owner </strong><br/> 
+								&nbsp;&nbsp;${test.devOwner} <br/>
+					            <strong> Failure Owner </strong><br/> 
+								&nbsp;&nbsp;${test.failureOwner} <br/>
+					        </td>
+					        <td>
+					            <strong> Package </strong><br/> 
+								&nbsp;&nbsp;${test.package} <br/>
+								<strong> File </strong> <br/>
+								&nbsp;&nbsp;${test.file} <br/>
+					            <strong> Class </strong><br/> 
+								&nbsp;&nbsp;${test.class} <br/>
+					        </td>
+							<td style="vertical-align:top">
+					            <strong> Failing Since </strong><br/> 
+								&nbsp;&nbsp;${test.failingSince} <br/>
+								<strong> Since Change </strong> <br/>
+								&nbsp;&nbsp;${test.sinceChange} <br/>
+					        </td>
+						</tr>
+					</table>
+				</div>
+				</div>
+
+				<!-- <#assign testsFailed = ${testsFailed}> -->
+      			<div class="page-header"> <h2> Failure Information </h2> </div>
+      			
+				<h3> Error Message</h3>
+				<blockquote>
+					${test.errorMessage}<br/>
+					this<br/>
+					is<br/>
+					an<br/>
+					error<br/>
+					message
+				</blockquote>
+				
+				<h3> Stack Trace </h3>
+				<blockquote>
+					${test.stackTrace}</br>
+					and<br/>
+					this<br/>
+					is<br/>
+					a<br/>
+					stack <br/>
+					trace<br/>
+				</blockquote>
+
+				<h3> Past Failures</h3>
+				<table id="failedTests" class="table table-condensed table-bordered table-striped"> 
+            			<thead> 
+                			<tr> 
+								<th>Run</th> 
+                				<th>Since Change</th> 
+                				<th>Failing Since</th> 
+                				<th>Duration</th> 
+                				<th>Failure Owner</th> 
+                			</tr> 
+            			</thead> 
+
+           	 			<tbody> 
+           	 				<!-- UNCOMMENT <#list testsFailed as testFail>
+           	 					<tr>
+									<td>${testFail.name}</td>
+           	 						<td>${testFail.package}</td>
+           	 						<td>${testFail.since_change}</td>
+           	 						<td>${testFail.failure_owner}</td>
+           	 						<td>${testFail.duration}</td>
+           	 					</tr>
+
+           	 				 </#list> -->
+
+							<!-- BEGIN: To delete once data is available-->
+								<tr>
+           	 						<td>test name</td>
+           	 						<td>test package</td>
+           	 						<td>test change</td>
+           	 						<td>test failure owner</td>
+           	 						<td>test duration</td>
+           	 					</tr>
+								<tr>
+           	 						<td>test name2</td>
+           	 						<td>test package4</td>
+           	 						<td>test change</td>
+           	 						<td>test failure owner</td>
+           	 						<td>test duration</td>
+           	 					</tr>
+								<tr>
+           	 						<td>test name3</td>
+           	 						<td>test package</td>
+           	 						<td>test change</td>
+           	 						<td>test failure owner</td>
+           	 						<td>test duration</td>
+           	 					</tr>
+								<tr>
+           	 						<td>test name4</td>
+           	 						<td>test package</td>
+           	 						<td>test change</td>
+           	 						<td>test failure owner</td>
+           	 						<td>test duration</td>
+           	 					</tr>
+								<tr>
+           	 						<td>test name5</td>
+           	 						<td>test package</td>
+           	 						<td>test change</td>
+           	 						<td>test failure owner</td>
+           	 						<td>test duration</td>
+           	 					</tr>
+								<tr>
+           	 						<td>test name6</td>
+           	 						<td>test package</td>
+           	 						<td>test change</td>
+           	 						<td>test failure owner</td>
+           	 						<td>test duration</td>
+           	 					</tr>
+								<tr>
+           	 						<td>test name7</td>
+           	 						<td>test package</td>
+           	 						<td>test change</td>
+           	 						<td>test failure owner</td>
+           	 						<td>test duration</td>
+           	 					</tr>
+								<tr>
+           	 						<td>test name8</td>
+           	 						<td>test package</td>
+           	 						<td>test change</td>
+           	 						<td>test failure owner</td>
+           	 						<td>test duration</td>
+           	 					</tr>
+							<!-- END: To delete once data is available-->
+            			</tbody> 
+    				</table>
+					
+					<div class="page-header"> <h2> Standard Output </h2> </div>
+					<blockquote>
+						${test.output} <br/>
+						all the output!
+					</blockquote>
+				
+
+
+    		</div>
+		</div>
+	</div>
+</body>
+</html>
