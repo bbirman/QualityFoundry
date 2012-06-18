@@ -3,7 +3,7 @@
 
 <html style="">
 <head>
-	<title>Test Results</title>
+	<title> ${test.runName} ${test.name} </title>
   
 	<link rel="stylesheet" href="scripts/bootstrap/css/bootstrap.css"/>
 	
@@ -57,7 +57,7 @@
 		
 		<form class="form-search" style="float:right; padding-top:2%">
 	  		<input type="text" id="global-search" data-provide="typeahead" class="search-query" placeholder="Search all">
-	  		<button type="submit" class="btn">Search</button>
+	  		<button type="submit" class="btn"><i class="icon-search"></i> Search</button>
 		</form>
 	</div>
 	<!--   #aaccdd -->
@@ -172,7 +172,10 @@
     
 				<ul class="breadcrumb">
 					<li>
-					    <a href="#">Run # Test Results</a> <span class="divider">/</span>
+					    ${run.name} <span class="divider">|</span>
+					</li>
+					<li>
+					    <a href=""> Test Results </a> <span class="divider">/</span>
 					</li>
 					<li class="active">Sample Test</li>
 				</ul>

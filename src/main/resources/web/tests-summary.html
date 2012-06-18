@@ -59,7 +59,7 @@
 		
 		<form class="form-search" style="float:right; padding-top:2%">
 	  		<input type="text" id="global-search" data-provide="typeahead" class="search-query" placeholder="Search all">
-	  		<button type="submit" class="btn">Search</button>
+	  		<button type="submit" class="btn"> <i class="icon-search"></i> Search</button>
 		</form>
 	</div>
 	<!--   #aaccdd -->
@@ -90,7 +90,7 @@
 				<!-- <#assign runs = ${runs}> 
 					<#list runs as run> 
 				
-					<h3><a href="#">${run.name}</a> 
+					<h3 style="outline: 0 none; -moz-outline: 0 none"><a href="#">${run.name}</a> 
 						<#if run.status == "running"> <img src="loading-snake.gif" alt="loading icon" style="padding-bottom: 6px; vertical-align:middle"/> </#if> 
 					</h3>
 					<div>
@@ -114,7 +114,7 @@
 						</#if>				
 					</div> -->
 					<!-- BEGIN: To delete once data is available-->
-					 <h3> Run 2</h3> 
+					 <h3 style="outline: 0 none; -moz-outline: 0 none"> Run 2</h3> 
 					<div>
 						&nbsp;&nbsp;<strong>Start Time</strong> 10:30 21-03-2012 <br/>
 						&nbsp;&nbsp;<strong>End Time</strong> 20:30 21-03-2012 <br/>
@@ -123,13 +123,13 @@
 						&nbsp;&nbsp; <span class="badge">6</span> <a href="#">Test Results</a>   <br/>
 						&nbsp;&nbsp; <span class="badge">6</span> <a href="#">Code Coverage</a> <br/>
 					</div>
-					<h3>Run 3 <img src="loading-snake.gif" alt="loading icon" style="padding-bottom: 6px; vertical-align:middle"/> </h3>
+					<h3 style="outline: 0">Run 3 <img src="loading-snake.gif" alt="loading icon" style="padding-bottom: 6px; vertical-align:middle"/> </h3>
 					<div>
 						&nbsp;&nbsp;<strong>Start Time</strong> 10:30 21-03-2012 <br/>
 						&nbsp;&nbsp;<em>Generating Results...</em><br/>
 						
 					</div>
-					<h3>Run 4</h3>
+					<h3 style="outline: 0">Run 4</h3>
 					<div>
 						&nbsp;&nbsp;<strong>Start Time</strong> 10:30 21-03-2012 <br/>
 						&nbsp;&nbsp;<strong>End Time</strong> 20:30 21-03-2012 <br/>
@@ -138,7 +138,7 @@
 						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Test Results</a> <span class="badge badge-important">6</span><br/>
 						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Code Coverage</a> <span class="badge badge-success">91%</span><br/>
 					</div>
-					<h3>Run 4</h3>
+					<h3 style="outline: 0">Run 5</h3>
 					<div>
 						&nbsp;&nbsp;<strong>Start</strong> 10:30 21-03-2012 <br/>
 						&nbsp;&nbsp;<strong>End</strong> 20:30 21-03-2012 <br/>
@@ -147,7 +147,7 @@
 						&nbsp;&nbsp;<a href="#">Test Results</a> <span class="badge badge-important">6</span><br/>
 						&nbsp;&nbsp;<a href="#">Code Coverage</a> <span class="badge badge-success">91%</span><br/>
 					</div>
-					<h3>Run 4</h3>
+					<h3 style="outline: 0">Run 6</h3>
 					<div>
 						&nbsp;&nbsp;<strong>Start Time</strong> 10:30 21-03-2012 <br/>
 						&nbsp;&nbsp;<strong>End Time</strong> 20:30 21-03-2012 <br/>
@@ -156,7 +156,7 @@
 						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Test Results</a> <span class="badge badge-important">6</span><br/>
 						&nbsp;&nbsp;<i class="icon-chevron-right"></i> <a href="#">Code Coverage</a> <span class="badge badge-success">91%</span><br/>
 					</div>
-					<h3>Run 4</h3>
+					<h3 style="outline: 0">Run 7</h3>
 					<div>
 						&nbsp;&nbsp;<strong>Start Time</strong> 10:30 21-03-2012 <br/>
 						&nbsp;&nbsp;<strong>End Time</strong> 20:30 21-03-2012 <br/>
@@ -173,7 +173,12 @@
 				<!--Body content-->
     
 				<ul class="breadcrumb">
-				  <li class="active">Run # Test Summary</li>
+					<li>
+						${run.name}
+						<span class="divider">|</span>
+					</li>
+						
+				 	<li class="active">Test Results</li>
 				</ul>
 				
 				<div style="float:right">

@@ -57,7 +57,7 @@
 		
 		<form class="form-search" style="float:right; padding-top:2%">
 	  		<input type="text" id="global-search" data-provide="typeahead" class="search-query" placeholder="Search all">
-	  		<button type="submit" class="btn">Search</button>
+	  		<button type="submit" class="btn"><i class="icon-search"></i> Search</button>
 		</form>
 	</div>
 	<!--   #aaccdd -->
@@ -171,7 +171,11 @@
 				<!--Body content-->
     
 				<ul class="breadcrumb">
-				  <li class="active">Run # Test Results</li>
+					<li> 
+						${run.name}
+						<span class="divider">|</span>
+					</li>
+				 	<li class="active">Build Output</li>
 				</ul>
 
       			<div class="page-header"> 
